@@ -1,0 +1,10 @@
+gramacylee,0.5,2.5,1,36
+SC_func,-2,2,2,36
+GN_func,-100,100,2,36
+goldstein_price,-2,2,2,36
+test_func2,0,10,2,36
+Sphere,-10,10,2,36
+Branin,-5 0,10 15,2,36
+LpNorm,-1,1,2,36
+Rosenbrock,-2,2,2,36
+RobotArm,0 0,1 6.283,2,36
