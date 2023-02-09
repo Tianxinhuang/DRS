@@ -1,4 +1,4 @@
-# RFNet
+# DRS
 The codes for Deep Residual Surrogate Model published in INFORMATION SCIENCES.
 
 ## Environment
