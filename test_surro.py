@@ -53,8 +53,8 @@ def err_calculate(names,models,downs,ups,samplenum,testnum=100):
             sm=model(ndim=dimnum)
         else:
             sm=model
-##        cal_models_R(downs[i],ups[i],samplenum[i],testnum,sm,ws,i+1,test_time=30)
-        compare_sampling(downs[i],ups[i],samplenum[i],testnum,sm,wss,i+1,test_time=20)
+##        cal_models_R(downs[i],ups[i],samplenum[i],testnum,sm,ws,i+1,test_time=30)#choose when compare DRS
+        compare_sampling(downs[i],ups[i],samplenum[i],testnum,sm,wss,i+1,test_time=20)#choose when compare validation
 ##        data1=latian1_sampling(downs[i],ups[i],samplenum[i])
 ##        label1=sm(data1)
 ##        data2=latian1_sampling(downs[i],ups[i],testnum)

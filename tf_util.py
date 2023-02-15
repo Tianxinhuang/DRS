@@ -246,9 +246,8 @@ def self_func8(X):
     y = X[1]
     result=x**8+y**7+x**6+y**5+(x**7)*y
     return result
-
 from Touchstone_master.touchstone.models.ackley import Ackley
-#(-8.192,-8.192),(8.192,8.192)
+(-8.192,-8.192),(8.192,8.192)
 def ackley2(X):
     model=Ackley(n_dim=2,bounds='small')
     result=model.evaluate(X.T)

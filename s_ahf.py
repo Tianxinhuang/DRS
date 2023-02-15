@@ -7,41 +7,25 @@ from smt.surrogate_models import KRG
 from smt.surrogate_models import QP
 from smt.surrogate_models import RBF
 from rbf import RBF_MQ
-from poly_rbf import Poly_RBF
-from xgrbf import XG_RBF
-from xgpolys import XG_Polys
 from residual_hybrid import resi_hybrid
-from residual_hybrid2 import resi_hybrid as resi_hybrid2
-from ann import ANN
 from svr import svr
 from ahf import AHF
 from es_hgl import ES_HGL
 from ues import UES
+from ann import ANN
 
 import tf_util as tl
 import random
 import copy
 import os
 import time
+#choose this when compare DRS performances
+model_list=[resi_hybrid(),AHF(),ES_HGL(),UES(),QP(print_global=False),KRG(poly='constant',print_global=False),\
+            RBF_MQ(delta=5),RBF(poly_degree=0,d0=0.34,print_global=False),ANN()]
 
-##model_list=[XG_RBF(delta=5,lamda=1,k=12,layernum=30),QP(print_global=False),KRG(poly='constant',print_global=False),\
-##            RBF_MQ(delta=5),RBF(poly_degree=0,d0=0.34,print_global=False)]
-##model_list=[resi_hybrid(),Poly_RBF(delta=5,lamda1=10,degree=5),XG_RBF(delta=5,lamda=0.1,k=36,layernum=10),QP(print_global=False),KRG(poly='constant',print_global=False),\
-##            RBF_MQ(delta=5),RBF(poly_degree=0,d0=0.34,print_global=False)]
-
-##model_list=[resi_hybrid(),AHF(),ES_HGL(),UES(),QP(print_global=False),KRG(poly='constant',print_global=False),\
-##            RBF_MQ(delta=5),RBF(poly_degree=0,d0=0.34,print_global=False),ANN()]
-model_list=[QP(print_global=False),KRG(poly='constant',print_global=False),\
-            RBF_MQ(delta=5),RBF(poly_degree=0,d0=0.34,print_global=False),svr()]
-
+#choose this when compare validation
 ##model_list=[QP(print_global=False),KRG(poly='constant',print_global=False),\
 ##            RBF_MQ(delta=5),RBF(poly_degree=0,d0=0.34,print_global=False),svr()]
-##model_list=[XG_Polys(lamda1=0,lamda2=0.1,k=12,poly_stage=4,layernum=30,use_k_adjust=True),QP(print_global=False),KRG(poly='constant',print_global=False),\
-##            RBF_MQ(delta=5),RBF(poly_degree=0,d0=0.34,print_global=False)]
-##model_list1=[QP(print_global=False),KRG(poly='constant',print_global=False),\
-##             RBF_MQ(delta=0.001),RBF(poly_degree=0,d0=0.001,print_global=False),Poly_RBF(delta=0.001,degree=2,\
-##            use_judgement=True,judge_type='a',judge_posi=True,topk=0.8,threshold=0.16,limit=6)]
-##model_list=[QP,KRG,RBF_MQ,RBF]
 
 ##calculate 
 #x:n*2
