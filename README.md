@@ -5,9 +5,10 @@ The codes for Deep Residual Surrogate Model published in INFORMATION SCIENCES.
 * Python 3.6.9
 * numpy 1.14.5
 * [SMTorg package](https://github.com/SMTorg/smt)
+* [Touchstone package](https://github.com/jldaniel/Touchstone)
 
 ## Dataset
-The Test problems are intergrated in the `tf_util`, which mainly come from [Ackley](http://www.sfu.ca/~ssurjano/ackley.html) and [SMT](https://smt.readthedocs.io/en/latest/_src_docs/problems.html).
+The Test problems are intergrated in the `tf_util`, which mainly come from [Ackley](http://www.sfu.ca/~ssurjano/ackley.html), [SMT](https://smt.readthedocs.io/en/latest/_src_docs/problems.html) and [Touchstone](https://github.com/jldaniel/Touchstone).
 
 ## Usage
 
